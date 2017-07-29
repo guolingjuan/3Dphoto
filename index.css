@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: #000;
+    overflow: hidden;
+}
+#wrap{
+    width:133px;
+    height:200px;
+    /* border:1px solid red; */
+    margin:150px auto;
+    position: relative;
+    transform-style: preserve-3d;  /*3d场景打造*/
+    transform:rotateX(-10deg)  /*rotateX绕x轴旋转*/
+
+}
+#perspective{
+    perspective: 800px;  /*元素距离视图的距离，以像素计。 景深（视角）*/
+}
+#wrap img{
+    position: absolute;
+    top:0;
+    -webkit-box-reflect:below 5px -webkit-gradient(linear, left top, left bottom,
+    from(transparent), color-stop(0.5, transparent), to(white));  /*倒影位置  倒影位置与本体之间的距离*/
+}
